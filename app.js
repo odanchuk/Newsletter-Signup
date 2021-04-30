@@ -38,7 +38,7 @@ app.post("/", function(req, res){
 
   const options = {
     method: "POST",
-    auth: "cat1:b6a8911c6bb845dc519880bda5775726-us1"
+    auth: "cat1:" + process.env.MAILCHIMP_KEY
 
   }
 
@@ -71,10 +71,3 @@ app.post("/error", function(req, res){
 app.listen(process.env.PORT || 3000, function(){
   console.log("Server is running on port 3000.");
 });
-
-
-//API Key
-// b6a8911c6bb845dc519880bda5775726-us1
-
-//List Id
-//4ba24ff489
